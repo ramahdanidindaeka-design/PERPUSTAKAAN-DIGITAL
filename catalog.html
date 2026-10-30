@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Buku - OpenShelf</title>
+    <!-- Menghubungkan ke file CSS external -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVIGASI / HEADER -->
+    <header class="navbar">
+        <div class="logo">
+            <h2>Open<span>Shelf</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="catalog.html" class="active">Katalog Buku</a></li>
+                <li><a href="contribute.html">Sumbang Ringkasan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HEADER KATALOG -->
+    <section class="catalog-header">
+        <h1>Katalog Koleksi Buku & Modul</h1>
+        <p>Temukan materi belajar, referensi kejuruan, dan buku pengembangan diri terlengkap.</p>
+        
+        <!-- Filter Kategori Buku -->
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterCategory('all')">Semua</button>
+            <button class="filter-btn" onclick="filterCategory('pelajaran')">Pelajaran SMA</button>
+            <button class="filter-btn" onclick="filterCategory('smk')">Keahlian SMK</button>
+            <button class="filter-btn" onclick="filterCategory('pengembangan')">Pengembangan Diri</button>
+        </div>
+    </section>
+
+    <!-- GRID KATALOG BUKU -->
+    <section class="main-content">
+        <div class="book-grid" id="catalogGrid">
+            
+            <!-- Buku 1: Pelajaran SMA -->
+            <div class="book-card" data-category="pelajaran">
+                <div class="book-badge">Pelajaran</div>
+                <img src="assets/images/cover1.jpg" alt="Matematika Lanjut" class="book-img">
+                <div class="book-info">
+                    <h3>Matematika Tingkat Lanjut XI</h3>
+                    <p class="author">Kemdikbudristek</p>
+                    <p class="desc">Modul ringkas pembahasan soal aljabar dan kalkulus dasar.</p>
+                    <a href="detail.html?id=1" class="btn-read">Baca Sekarang</a>
+                </div>
+            </div>
+
+            <!-- Buku 2: Keahlian SMK -->
+            <div class="book-card" data-category="smk">
+                <div class="book-badge">Keahlian SMK</div>
+                <img src="assets/images/cover2.jpg" alt="Web Dev" class="book-img">
+                <div class="book-info">
+                    <h3>Panduan Dasar Web (HTML, CSS, JS)</h3>
+                    <p class="author">Komunitas OpenShelf</p>
+                    <p class="desc">Ringkasan praktis untuk siswa SMK Rekayasa Perangkat Lunak (RPL).</p>
+                    <a href="detail.html?id=2" class="btn-read">Baca Sekarang</a>
+                </div>
+            </div>
+
+            <!-- Buku 3: Pengembangan Diri -->
+            <div class="book-card" data-category="pengembangan">
+                <div class="book-badge">Pengembangan Diri</div>
+                <img src="assets/images/cover3.jpg" alt="Pengembangan Diri" class="book-img">
+                <div class="book-info">
+                    <h3>Manajemen Stres Sekolah</h3>
+                    <p class="author">Tim Konseling</p>
+                    <p class="desc">Tips praktis mengelola waktu, tugas sekolah, dan persiapan ujian.</p>
+                    <a href="detail.html?id=3" class="btn-read">Baca Sekarang</a>
+                </div>
+            </div>
+
+            <!-- Buku 4: Keahlian SMK -->
+            <div class="book-card" data-category="smk">
+                <div class="book-badge">Keahlian SMK</div>
+                <img src="assets/images/cover4.jpg" alt="Desain Grafis" class="book-img">
+                <div class="book-info">
+                    <h3>Dasar Desain Grafis & UI/UX</h3>
+                    <p class="author">Studio Kreatif Pelajar</p>
+                    <p class="desc">Belajar prinsip dasar warna, tipografi, dan Figma untuk pemula.</p>
+                    <a href="detail.html?id=4" class="btn-read">Baca Sekarang</a>
+                </div>
+            </div>
+
+            <!-- Buku 5: Pelajaran SMA -->
+            <div class="book-card" data-category="pelajaran">
+                <div class="book-badge">Pelajaran</div>
+                <img src="assets/images/cover5.jpg" alt="Fisika" class="book-img">
+                <div class="book-info">
+                    <h3>Fisika: Mekanika & Gerak</h3>
+                    <p class="author">Tim MIPA Nasional</p>
+                    <p class="desc">Penjelasan konsep fisika sehari-hari disertai rumus cepat dan latihan soal.</p>
+                    <a href="detail.html?id=5" class="btn-read">Baca Sekarang</a>
+                </div>
+            </div>
+
+            <!-- Buku 6: Pengembangan Diri -->
+            <div class="book-card" data-category="pengembangan">
+                <div class="book-badge">Pengembangan Diri</div>
+                <img src="assets/images/cover6.jpg" alt="Public Speaking" class="book-img">
+                <div class="book-info">
+                    <h3>Public Speaking untuk Presentasi Tugas</h3>
+                    <p class="author">Coach Remaja</p>
+                    <p class="desc">Cara mengatasi grogi dan menyusun bahan presentasi yang memukau di kelas.</p>
+                    <a href="detail.html?id=6" class="btn-read">Baca Sekarang</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 OpenShelf Library - Dibuat untuk Pelajar Indonesia</p>
+    </footer>
+
+    <!-- Menghubungkan ke file JavaScript external -->
+    <script src="js/script.js"></script>
+</body>
+</html>
