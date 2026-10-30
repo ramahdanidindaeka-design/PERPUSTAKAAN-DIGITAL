@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumbang Ringkasan - OpenShelf</title>
+    <!-- Menghubungkan ke file CSS external -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVIGASI / HEADER -->
+    <header class="navbar">
+        <div class="logo">
+            <h2>Open<span>Shelf</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="catalog.html">Katalog Buku</a></li>
+                <li><a href="contribute.html" class="active">Sumbang Ringkasan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- KONTEN UTAMA HALAMAN KONTRIBUSI -->
+    <main class="contribute-container">
+        <section class="contribute-header">
+            <h1>Bagikan Catatan & Ringkasan Belajarmu</h1>
+            <p>Punya rangkuman materi pelajaran atau catatan praktikum kejuruan yang rapi? Bantu teman-teman se-Indonesia dengan membagikannya di sini!</p>
+        </section>
+
+        <!-- FORMULIR KONTRIBUSI -->
+        <section class="form-section">
+            <form id="contributeForm" onsubmit="submitContribution(event)">
+                
+                <div class="form-group">
+                    <label for="contribName">Nama Lengkap / Nama Panggilan</label>
+                    <input type="text" id="contribName" placeholder="Contoh: Rian Pratama" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contribSchool">Asal Sekolah (SMA / SMK)</label>
+                    <input type="text" id="contribSchool" placeholder="Contoh: SMK Negeri 1 Jakarta" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contribBookTitle">Judul Ringkasan / Modul</label>
+                    <input type="text" id="contribBookTitle" placeholder="Contoh: Rumus Cepat Fisika Kelas 12" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contribCategory">Kategori Materi</label>
+                    <select id="contribCategory" required>
+                        <option value="" disabled selected>Pilih Kategori</option>
+                        <option value="pelajaran">Pelajaran SMA</option>
+                        <option value="smk">Keahlian / Praktik SMK</option>
+                        <option value="pengembangan">Pengembangan Diri / Tips Belajar</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="contribDesc">Deskripsi Singkat / Sinopsis Materi</label>
+                    <textarea id="contribDesc" rows="4" placeholder="Jelaskan secara singkat apa saja isi dari catatan atau modul yang kamu bagikan..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="contribLink">Tautan File (Google Drive / Link Dokumen Publik)</label>
+                    <input type="url" id="contribLink" placeholder="https://drive.google.com/..." required>
+                    <small class="form-hint">Pastikan tautan file bersifat publik agar bisa diakses oleh pengunjung lain.</small>
+                </div>
+
+                <button type="submit" class="btn-primary-full">Kirim Kontribusi</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 OpenShelf Library - Dibuat untuk Pelajar Indonesia</p>
+    </footer>
+
+    <!-- Menghubungkan ke file JavaScript external -->
+    <script src="js/script.js"></script>
+</body>
+</html>
