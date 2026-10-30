@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Buku - OpenShelf</title>
+    <!-- Menghubungkan ke file CSS external -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVIGASI / HEADER -->
+    <header class="navbar">
+        <div class="logo">
+            <h2>Open<span>Shelf</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="catalog.html">Katalog Buku</a></li>
+                <li><a href="contribute.html">Sumbang Ringkasan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- KONTEN DETAIL BUKU -->
+    <main class="detail-container">
+        <!-- Bagian Informasi Utama Buku -->
+        <section class="book-detail-header">
+            <div class="detail-cover">
+                <img src="assets/images/cover1.jpg" alt="Cover Buku" id="bookCover">
+            </div>
+            <div class="detail-info">
+                <span class="book-badge" id="bookCategory">Pelajaran</span>
+                <h1 id="bookTitle">Matematika Tingkat Lanjut XI</h1>
+                <p class="author">Penulis: <strong id="bookAuthor">Kemdikbudristek</strong></p>
+                
+                <div class="book-meta">
+                    <span>Format: PDF / Ringkasan Digital</span>
+                    <span>Tahun: 2023</span>
+                    <span>Halaman: 120</span>
+                </div>
+
+                <div class="action-buttons">
+                    <!-- Link dapat diarahkan ke file PDF atau viewer online -->
+                    <a href="#" class="btn-primary" id="readBtn" target="_blank">Baca Sekarang</a>
+                    <button class="btn-secondary" onclick="saveBookmark()">Simpan Favorit</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Deskripsi & Ringkasan -->
+        <section class="book-description">
+            <h2>Ringkasan & Deskripsi</h2>
+            <p id="bookSynopsis">
+                Modul ini dirancang khusus untuk membantu siswa SMA kelas XI memahami konsep dasar matematika tingkat lanjut seperti aljabar, matriks, dan pengenalan kalkulus dasar. Dilengkapi dengan contoh soal kontekstual dan langkah pembahasan yang sistematis agar mudah dipelajari secara mandiri.
+            </p>
+        </section>
+
+        <!-- Bagian Ulasan & Diskusi Siswa -->
+        <section class="book-reviews">
+            <h2>Ulasan & Catatan Siswa</h2>
+
+            <!-- Form Tambah Ulasan -->
+            <div class="review-form">
+                <h3>Tambah Ulasan Kamu</h3>
+                <form id="addReviewForm" onsubmit="submitReview(event)">
+                    <div class="form-group">
+                        <input type="text" id="reviewerName" placeholder="Nama atau Nama Panggilan" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="reviewerComment" rows="3" placeholder="Tuliskan ulasan atau catatan penting tentang buku ini..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Kirim Ulasan</button>
+                </form>
+            </div>
+
+            <!-- Daftar Ulasan yang Sudah Ada -->
+            <div class="review-list" id="reviewList">
+                <div class="review-card">
+                    <div class="review-header">
+                        <strong>Budi (Siswa SMK)</strong>
+                        <span class="review-date">2 hari lalu</span>
+                    </div>
+                    <p>Penjelasan di bab 2 sangat membantu buat persiapan ujian. Ringkas dan paham dalam waktu singkat!</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <strong>Siti (Siswa SMA)</strong>
+                        <span class="review-date">1 minggu lalu</span>
+                    </div>
+                    <p>Sangat berguna! Latihan soalnya mirp banget sama yang keluar di Penilaian Akhir Semester.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 OpenShelf Library - Dibuat untuk Pelajar Indonesia</p>
+    </footer>
+
+    <!-- Menghubungkan ke file JavaScript external -->
+    <script src="js/script.js"></script>
+</body>
+</html>
