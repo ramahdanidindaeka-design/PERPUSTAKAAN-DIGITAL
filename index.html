@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenShelf - Perpustakaan Online SMA/SMK</title>
+    <!-- Menghubungkan ke file CSS external -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVIGASI / HEADER -->
+    <header class="navbar">
+        <div class="logo">
+            <h2>Open<span>Shelf</span></h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Beranda</a></li>
+                <li><a href="catalog.html">Katalog Buku</a></li>
+                <li><a href="contribute.html">Sumbang Ringkasan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BANNER UTAMA (HERO SECTION) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Akses Ribuan Modul, Buku & Ringkasan Gratis</h1>
+            <p>Platform perpustakaan digital interaktif khusus anak SMA/SMK. Belajar tanpa batas kapan saja!</p>
+            
+            <!-- Kolom Pencarian -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cari judul buku, mata pelajaran, atau topik...">
+                <button onclick="searchBook()">Cari</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- REKOMENDASI BUKU (FEATURED BOOKS) -->
+    <section class="main-content">
+        <h2>Buku & Modul Populer</h2>
+        <p class="subtitle">Pilihan favorit dari teman-teman SMA dan SMK</p>
+
+        <div class="book-grid" id="bookGrid">
+            
+            <!-- Kartu Buku 1 -->
+            <div class="book-card" data-title="Matematika Lanjut Klas 11" data-category="pelajaran">
+                <div class="book-badge">Pelajaran</div>
+                <img src="assets/images/cover1.jpg" alt="Cover Buku Matematika" class="book-img">
+                <div class="book-info">
+                    <h3>Matematika Tingkat Lanjut XI</h3>
+                    <p class="author">Kemdikbudristek</p>
+                    <p class="desc">Modul ringkas pembahasan soal aljabar dan kalkulus dasar.</p>
+                    <a href="detail.html?id=1" class="btn-read">Baca Sekarang</a>
+                </div>
+            </div>
+
+            <!-- Kartu Buku 2 -->
+            <div class="book-card" data-title="Dasar-Dasar Pemrograman Web" data-category="smk">
+                <div class="book-badge">Keahlian SMK</div>
+                <img src="assets/images/cover2.jpg" alt="Cover Buku Web Dev" class="book-img">
+                <div class="book-info">
+                    <h3>Panduan Dasar Web (HTML, CSS, JS)</h3>
+                    <p class="author">Komunitas OpenShelf</p>
+                    <p class="desc">Ringkasan praktis untuk siswa SMK Rekayasa Perangkat Lunak (RPL).</p>
+                    <a href="detail.html?id=2" class="btn-read">Baca Sekarang</a>
+                </div>
+            </div>
+
+            <!-- Kartu Buku 3 -->
+            <div class="book-card" data-title="Filosofi Teras untuk Remaja" data-category="fiksi">
+                <div class="book-badge">Pengembangan Diri</div>
+                <img src="assets/images/cover3.jpg" alt="Cover Buku Pengembangan Diri" class="book-img">
+                <div class="book-info">
+                    <h3>Manajemen Stres Sekolah</h3>
+                    <p class="author">Tim Konseling</p>
+                    <p class="desc">Tips praktis mengelola waktu, tugas sekolah, dan persiapan ujian.</p>
+                    <a href="detail.html?id=3" class="btn-read">Baca Sekarang</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 OpenShelf Library - Dibuat untuk Pelajar Indonesia</p>
+    </footer>
+
+    <!-- Menghubungkan ke file JavaScript external -->
+    <script src="js/script.js"></script>
+</body>
+</html>
